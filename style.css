@@ -1,19 +1,49 @@
+/*body{
+    background-color: blue;
+}
 p{
+    background-color:brown;
+    color: white;
+}
+ h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(121, 23, 40);
+ }
+ #home{
+    background-color:aqua;
+ }
+ .footer{
+    background-color: black;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+ }*/
+ div~p{
+   background-color: Brown;
+   color:white;
+ }
+ p:hover{
+    font-size: xx-large;
     background-color: aqua;
-    color: black;
+ }
+ p::after{
+    content: "Abes engineering collage";
+    background-color: coral;
+    color: aliceblue;
+ }
+  p::before{
+    content: "Abes engineering collage";
+    background-color: purple;
+    color: aliceblue;
+ }
+ p::selection{
+    background-color: chartreuse;
 
-
-}
-h2{
-    background-color: brown;
-    font-size: 50px;
-}
-#home{
-    background-color: yellowgreen;
-    font-size: 50px;
-}
-.h{
-    background-color: rgb(187, 0, 255);
-    font-size: 50px;
-
-}
+ }
+ p:nth-child(2){
+    background-color: black;
+    color: white;
+ }
+ p:nth-of-type(1){
+    background-color: blue;
+    color: aliceblue;
+ }
