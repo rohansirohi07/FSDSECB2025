@@ -5,17 +5,26 @@ import './App.css'
 import profile from './component/Profile'
 import Gallery from './component/Gallery'
 import StateHandling from './component/StateHandling'
+import ImageManipulation from './component/imagemanipulation'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './component/pages/Login'
 
 function App() {
  
 
   return (
     <div className='container'>
-      <h2>Welcome to ReactVite.</h2>
+      {/* <h2>Welcome to ReactVite.</h2> */}
 
        {/* <Gallery />  */}
 
-      <StateHandling />
+      {/* <StateHandling /> */}
+       {/* <ImageManipulation/> */}
+       <BrowserRouter>
+       <Routes>
+        <Route path='/login' element={<Login/>}/>
+        </Routes>
+       </BrowserRouter>
     </div>
   )
 }
