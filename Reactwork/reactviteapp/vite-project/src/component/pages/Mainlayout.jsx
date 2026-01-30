@@ -1,9 +1,14 @@
 import React from 'react'
-
-function Mainlayout() {
+import {Link } from 'react-router-dom'
+function MainLayout() {
   return (
-    <div>Mainlayout</div>
+    <div>
+      <nav>
+        <Link style={{fontSize:'30px',color:'brown',marginLeft:'200px',marginTop:'200px'}} to='/login'>Login</Link> |
+        <Link style={{fontSize:'30px',color:'brown',marginLeft:'200px',marginTop:'200px'}} to='/register'>Registration</Link>
+      </nav>
+    </div>
   )
 }
 
-export default Mainlayout
+export default MainLayout

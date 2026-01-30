@@ -2,29 +2,38 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import profile from './component/Profile'
+import Profile from './component/Profile'
 import Gallery from './component/Gallery'
 import StateHandling from './component/StateHandling'
-import ImageManipulation from './component/imagemanipulation'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ImageManipulation from './component/imageManipulation'
+import { BrowserRouter,Route,Routes } from 'react-router-dom' 
 import Login from './component/pages/Login'
+import Registration from './component/pages/Registration'
+import Dashboard from './component/pages/Dashboard'
+import MainLayout from '.component/pages/MainLayout'
 
 function App() {
- 
-
+  const[data,setData]=useState();
   return (
-    <div className='container'>
-      {/* <h2>Welcome to ReactVite.</h2> */}
+    <div>
+      {/*<h2>Welcome to ReactVite.</h2>*}
 
-       {/* <Gallery />  */}
-
-      {/* <StateHandling /> */}
-       {/* <ImageManipulation/> */}
+       {/*<Gallery />*/ }
+       {/*<StateHandling />*/}
+       {/*<ImageManipulation/>*/}
        <BrowserRouter>
        <Routes>
-        <Route path='/login' element={<Login/>}/>
-        </Routes>
+        <Route path='/login' element={<Login logData={data}/>}> </Route>
+        <Route path='/register' element={<Registration regData={setData}/>}> </Route>
+         <Route path='/dashboard' element={<Dashboard />}> </Route>
+          <Route path='/' element={<MainLayout />}/> 
+       </Routes>
        </BrowserRouter>
+       <h2>
+        {JSON.stringify(data)}
+       </h2>
+
+  
     </div>
   )
 }
